@@ -3,50 +3,101 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Download the Sticker Club printout here. Teach your kids the joy in sending and receiving something in the mail."
+    />
+    <!-- Control the behavior of search engine crawling and indexing -->
+    <!-- All Search Engines -->
+    <meta name="robots" content="index,follow" />
+    <!-- Google Specific -->
+    <meta name="googlebot" content="index,follow" />
+
+    <!-- Helps prevent duplicate content issues -->
+    <link rel="canonical" href="https://stickerclub.org/" />
+
+    <!-- Facebook Open Graph meta -->
+    <meta property="og:url" content="https://stickerclub.org/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="The Sticker Club" />
+
+    <meta
+      property="og:image"
+      content="https://stickerclub.org/default_social_image.jpg"
+    />
+
+    <meta
+      property="og:description"
+      content="Download the Sticker Club printout here. Teach your kids the joy in sending and receiving something in the mail."
+    />
+    <meta property="og:site_name" content="The Sticker Club" />
+    <meta property="og:locale" content="en_US" />
     <title>The Sticker Club</title>
 
     <link rel="icon" href="/logo-32.png" type="image/png" />
 
     <style>
       :root {
-        --accent: rgb(110, 192, 107);
-        --accent-80pct: rgba(110, 192, 107, 0.8);
+        --accent: #2858a3;
+        --accent-80pct: #2858a3aa;
+        --border: #dbdbdb;
+        --max-width: 800px;
       }
+
+      * {
+        box-sizing: border-box;
+      }
+
       body {
-        font-family: "SourceSansPro", -apple-system, BlinkMacSystemFont,
-          "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto,
-          "Segoe UI", Arial, sans-serif;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+          "Helvetica Neue", "Segoe UI Emoji", "Apple Color Emoji",
+          "Noto Color Emoji", sans-serif;
 
-        height: 100vh;
-        margin: 0;
+        height: 100%;
+        max-width: var(--max-width);
+        margin: 0 auto;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        background: linear-gradient(45deg, #e94584, #dceb0e, #27dbb1, #87159e);
 
-        font-size: 1.5em;
+        padding: 2em;
+
+        font-size: 1.2em;
       }
 
       main {
-        max-width: 1280px;
-        margin: 0 auto;
+        max-width: var(--max-width);
         padding: 2em;
 
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+
+        background-color: #fff;
       }
 
-      h1 {
-        text-align: center;
-        margin-bottom: 3em;
+      img {
+        width: 300px;
       }
 
       footer {
-        max-width: 1280px;
+        max-width: var(--max-width);
         padding: 2em;
+        margin-top: 4em;
+
+        border-top: 1px solid var(--border);
 
         font-size: 0.8em;
 
         text-align: center;
+      }
+
+      #animals {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        font-size: 72px;
       }
 
       .button {
@@ -56,10 +107,28 @@
         text-decoration: none;
         padding: 16px 32px;
         text-align: center;
+        border-radius: 6px;
       }
 
       .button:hover {
         background: var(--accent-80pct);
+      }
+
+      @media only screen and (max-width: 800px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        img {
+          width: 250px;
+        }
+
+        #animals {
+          display: flex;
+          flex-direction: row;
+          gap: 0.8em;
+          font-size: 36px;
+        }
       }
     </style>
 
@@ -71,10 +140,21 @@
   </head>
   <body>
     <main>
-      <h1>The Sticker Club</h1>
-      <a class="button" href="/sticker-club-letter.pdf">Print the Letter</a>
-      <!-- <p>Built by The Animal Adventurer and The Super Snuggler &#128149;</p> -->
+      <img alt="logo" src="/logo.svg" />
+      <div id="animals">
+        <p>🦊</p>
+        <p>🐼</p>
+        <p>🐷</p>
+        <p>🦁</p>
+      </div>
+      <a class="button" href="/sticker-club-letter.pdf"
+        >Print the Sticker Club Letter</a
+      >
+      <h2>The Joy of getting something in the mail</h2>
+      <p>
+        Teach your kids the joy in sending and receiving something in the mail.
+        Download the Sticker Club printout and mail your stickers today!
+      </p>
     </main>
-    <footer></footer>
   </body>
 </html>
