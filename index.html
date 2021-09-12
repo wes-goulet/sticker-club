@@ -93,6 +93,11 @@
         text-rendering: optimizeLegibility;
       }
 
+      em {
+        line-height: 1.8;
+        color: #555;
+      }
+
       footer {
         max-width: var(--max-width);
         padding: 2em;
@@ -113,7 +118,7 @@
       }
 
       .button {
-        display: inline-block;
+        display: block;
         background: var(--accent);
         color: #fff;
         text-decoration: none;
@@ -159,10 +164,13 @@
         <p>🐷</p>
         <p>🦁</p>
       </div>
-      <a class="button" href="/sticker-club-letter.pdf"
-        >Print the Sticker Club Letter</a
-      >
-      <h1>The Joy of getting something in the mail</h1>
+      <div id="button-container">
+        <a class="button" href="/sticker-club-letter.pdf"
+          >Print the Sticker Club Letter</a
+        >
+        <em class="cta-caption">PDF Printout</em>
+      </div>
+      <h1>The joy of getting something in the mail</h1>
       <p>
         Teach your kids the joy in sending and receiving something in the mail.
         Download the Sticker Club printout and mail your stickers today!
